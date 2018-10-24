@@ -9,16 +9,16 @@ export const header = `<header id="headerBaqJS" class="headerBaqJS">
           display: flex;
       }
       .icon-redes a {
-          color: white;
+          color: #222;
           padding: 7px 8px;
           margin-left: 12px;
-          border-radius: 50%;
-          border: 2px solid white;
+          font-size: 24px;
       }
+
   </style>
   <div class="icon-redes">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-meetup"></i></a>
+      <a target="_blank" href="https://www.instagram.com/barranquillajs/"><i class="fab fa-instagram"></i></a>
+      <a target="_blank" href="https://twitter.com/baq_js"><i class="fab fa-twitter"></i></a>
+      <a target="_blank" href="https://www.meetup.com/es-ES/BarranquillaJS/"><i class="fab fa-meetup"></i></a>
   </div>
 </header>`;
