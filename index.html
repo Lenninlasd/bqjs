@@ -20,15 +20,59 @@
         <script type="module">
             import { header } from './header.js';
             import { consoleTempl } from './htmlConsole.js';
-
+            import { members } from './members.js';
+            
             const template = `
                 <div>
                     ${ header }
                     ${ consoleTempl }
+                    ${ members }
                 </div>
             `;
-
+            
             document.getElementById("main").innerHTML = template;
         </script>
+
+                <script type="text/javascript" language="javascript">
+                    var http_request = false;
+                    var members = null;
+
+                    function loadJSON(callback) {   
+                        var xobj = new XMLHttpRequest();
+                            xobj.overrideMimeType("application/json");
+                        xobj.open('GET', 'members.json', true); // Reads content from members.json
+                        
+                        xobj.onreadystatechange = function () {
+                            if (xobj.readyState == 4 && xobj.status == "200") {
+                                callback(xobj.responseText);
+                                members.forEach(element => {
+                                    let member = document.createElement("li");
+                                    let css_id = (element.leader) ? "leader" : "member";
+                                    member.classList.add(css_id + '-flex-item');
+                                    member.innerHTML = `
+                                            <div class="`+css_id+`-image-cropper">
+                                             <img src=` + element.photo + ` alt="Photo of `+ element.name +` " class="member-photo">
+                                            </div>
+                                         <div class="member-name">`+ element.name +`</div>
+                                        `
+                                    document.getElementById('js-' + css_id + '-list').appendChild(member);
+                                });
+                            }
+                        };
+                        xobj.send(null);  
+                        }
+                    function init() {
+                        loadJSON(function(response) {
+                        // Parse JSON string into object
+                            members = JSON.parse(response);
+                        });
+                    }
+                    function load() {
+                        // alert("evento load detectado!");
+                        init();
+                    }
+                    window.onload = load;
+                </script>
+                
     </body>
 </html>
