@@ -43,6 +43,12 @@
                             xobj.overrideMimeType("application/json");
                         xobj.open('GET', 'members.json', true); // Reads content from members.json
                         xobj.onreadystatechange = function () {
+                            // if xobj has not finished we're not ready yet so just return
+                            if (xobj.readyState !== 4 ) return;
+                            if (xobj.status !== 200) { 
+                                alert('There was an error loading the members file');
+                                return console.log('There was an error loading the members file ' + xhr.status); 
+                            }
                             if (xobj.readyState == 4 && xobj.status == "200") {
                                 callback(xobj.responseText);
                                 members.forEach(element => {
@@ -50,9 +56,9 @@
                                     member.classList.add(element.role + '-flex-item');
                                     member.innerHTML = `
                                             <div class="${element.role}-image-cropper">
-                                             <img src=${element.photo} alt="Photo of `+ element.name +` " class="member-photo">
+                                             <img src=${element.photo} alt="Photo of ${element.name} " class="member-photo">
                                             </div>
-                                         <div class="member-name">`+ element.name +`</div>
+                                         <div class="member-name">${element.name}</div>
                                      `
                                     document.getElementById('js-' + element.role + '-list').appendChild(member);
                                 });
