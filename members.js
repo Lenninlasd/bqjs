@@ -1,5 +1,3 @@
-
-
 export const members = 
 `<style>
 .member-image-cropper {
@@ -16,7 +14,7 @@ export const members =
     height: 100%;
     width: auto;
 }
-.leader-image-cropper {
+.organizer-image-cropper {
     width: 30vh;
     height: 30vh;
     position: relative;
@@ -58,7 +56,7 @@ export const members =
     text-align: center;
   }
 
-  .leader-flex-item {
+  .organizer-flex-item {
     padding: 5vh;
     height: 15vh;
     margin-top: 10vh;
@@ -74,7 +72,7 @@ export const members =
         </h2>
 </div>  
 
-<ul class="flex-container list" id="js-leader-list">  
+<ul class="flex-container list" id="js-organizer-list">  
 
 </ul>  
 
