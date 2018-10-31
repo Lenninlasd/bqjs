@@ -1,4 +1,4 @@
-[
+ export default [
     {
         "id" : "184086652",
         "name" : "Javier Daza",
@@ -1599,5 +1599,5 @@
         "thumb" : "https://secure.meetupstatic.com/photos/member/d/b/6/b/thumb_277676171.jpeg",
         "role": "member"
         }
-                
+
 ]
