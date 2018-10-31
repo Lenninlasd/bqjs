@@ -38,7 +38,7 @@ export const Header = `
         <header class="navbarBaqJS">
 
             <div class="navbar-left-text">
-                <img src="./img/BAQJS-02.png" alt="BarranquillaJS logo">
+                <img src="./src/img/BAQJS-02.png" alt="BarranquillaJS logo">
                 <h1 class="title">
                     BarranquillaJS
                 </h1>

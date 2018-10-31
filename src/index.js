@@ -1,8 +1,10 @@
-import { Header } from "./modules";
+import { Header, Hero, Members } from "./modules/index.js";
 
 const template = `
 <div>
     ${Header}
+    ${Hero}
+    ${Members}
 </div>
 `;
 

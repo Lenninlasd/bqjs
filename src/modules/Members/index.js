@@ -1,4 +1,6 @@
-/* const membersStyle = `<style>
+import membersList from "./memberList.js";
+
+const membersStyle = `<style>
     .member-image-cropper {
         width: 15vh;
         height: 15vh;
@@ -64,37 +66,34 @@
     }
 </style>`;
 
-import membersList from './memberList.js';
-
-const crateMemberContainer = element => (
-    `<li class="${element.role}-flex-item">
-            <div class="${element.role}-image-cropper">
-             <img src=${element.photo} alt="Photo of ${element.name} " class="member-photo">
+const crateMemberContainer = element =>
+  `<li class="${element.role}-flex-item">
+    <div class="${element.role}-image-cropper">
+    <img src=${element.photo} alt="Photo of ${
+    element.name
+  }" class="member-photo">
             </div>
          <div class="member-name">${element.name}</div>
-    </li>`
-);
+    </li>`;
 
 const addMembers = membersList => {
-    const organizers = [];
-    const regularMember = [];
+  const organizers = [];
+  const regularMember = [];
 
-    membersList.forEach(element => {
-        if (element.role === 'organizer') {
-            organizers.push(crateMemberContainer(element));
-        }else if(element.role === 'member'){
-            regularMember.push(crateMemberContainer(element));
-        }
-    });
+  membersList.forEach(element => {
+    if (element.role === "organizer") {
+      organizers.push(crateMemberContainer(element));
+    } else if (element.role === "member") {
+      regularMember.push(crateMemberContainer(element));
+    }
+  });
 
-    return (
-        `<ul class="flex-container list" id="js-organizer-list">
-            ${ organizers.join('') }
+  return `<ul class="flex-container list" id="js-organizer-list">
+            ${organizers.join("")}
         </ul>
         <ul class="flex-container list" id="js-member-list">
-            ${ regularMember.join('') }
-        </ul>`
-    );
+            ${regularMember.join("")}
+        </ul>`;
 };
 
 const whoami = `
@@ -103,9 +102,8 @@ const whoami = `
     </div>
 `;
 
-export const membersTempl =`
-    ${ membersStyle }
-    ${ whoami }
-    ${ addMembers(membersList) }
+export const Members = `
+    ${membersStyle}
+    ${whoami}
+    ${addMembers(membersList)}
 `;
- */

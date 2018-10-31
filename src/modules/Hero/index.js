@@ -1,4 +1,4 @@
-/* export const consoleTempl = `
+export const Hero = `
 <style>
     .console{
         font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
@@ -31,7 +31,6 @@
         display: inline-block;
         text-decoration:none;
     }
-
 </style>
 <div class="console">
     <div class="text-container">
@@ -47,4 +46,3 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Atlantico-municipios.svg">
     </div>
 </div>`;
- */
