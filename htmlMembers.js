@@ -1,4 +1,4 @@
-const membersStyle = `<style>
+/* const membersStyle = `<style>
     .member-image-cropper {
         width: 15vh;
         height: 15vh;
@@ -108,3 +108,4 @@ export const membersTempl =`
     ${ whoami }
     ${ addMembers(membersList) }
 `;
+ */

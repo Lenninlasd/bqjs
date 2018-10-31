@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <title>BaqJS</title>
-    </head>
-    <body>
-        <style>
-            body {
-                background: #f6f6f6;
-                font-family: sans-serif;
-                margin: 0;
-            }
-        </style>
-        <div id="main"></div>
 
-        <script type="module">
-            import { header } from './header.js';
-            import { consoleTempl } from './htmlConsole.js';
-            import { membersTempl } from './htmlMembers.js';
-            const template = `
-                <div>
-                    ${ header }
-                    ${ consoleTempl }
-                    ${ membersTempl }
-                </div>
-            `;
-            document.getElementById("main").innerHTML = template;
-        </script>
-    </body>
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <title>BaqJS</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background: #f6f6f6;
+            font-family: sans-serif;
+            margin: 0;
+        }
+    </style>
+    <div id="main"></div>
+
+    <script src="./src/index.js"></script>
+</body>
+
 </html>

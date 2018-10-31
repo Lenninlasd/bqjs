@@ -1,4 +1,4 @@
-export const header = `
+export const Header = `
     <style>
         .baq-container {
             padding-left: 20px;

@@ -1,4 +1,4 @@
-export const consoleTempl = `
+/* export const consoleTempl = `
 <style>
     .console{
         font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
@@ -47,3 +47,4 @@ export const consoleTempl = `
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Atlantico-municipios.svg">
     </div>
 </div>`;
+ */
