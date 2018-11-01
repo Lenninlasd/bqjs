@@ -1,13 +1,5 @@
  export default [
     {
-        "id" : "184086652",
-        "name" : "Javier Daza",
-        "high" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/highres_249808022.jpeg",
-        "photo" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/member_249808022.jpeg",
-        "thumb" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/thumb_249808022.jpeg",
-        "role": "organizer"
-        },
-    {
         "id" : "184307583",
         "name" : "Richard Roncancio",
         "high" : "https://secure.meetupstatic.com/photos/member/5/8/5/c/highres_259462620.jpeg",
@@ -31,6 +23,14 @@
         "thumb" : "https://secure.meetupstatic.com/photos/member/d/d/d/6/thumb_266456790.jpeg",
         "role": "organizer"
         },
+        {
+            "id" : "184086652",
+            "name" : "Javier Daza",
+            "high" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/highres_249808022.jpeg",
+            "photo" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/member_249808022.jpeg",
+            "thumb" : "https://secure.meetupstatic.com/photos/member/6/d/7/6/thumb_249808022.jpeg",
+            "role": "member"
+            },
         {
         "id" : "255603481",
         "name" : "Edgardo",

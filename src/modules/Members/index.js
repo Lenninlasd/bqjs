@@ -1,35 +1,53 @@
 import membersList from "./memberList.js";
 
 const membersStyle = `<style>
+    .members-container {
+        position: relative;
+    }
+
+    .members-wrapper {
+        margin: auto;
+        max-width: 1152px;  
+
+    }
     .member-image-cropper {
+        width: 10vh;
+        height: 10vh;
+        position: relative;
+        overflow: hidden;
+
+        text-align: center;
+    }
+    .member-photo {
+        border-radius: 50%;
+        display: inline;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .member-name {
+        margin-top: 16px;
+        font-weight: 400;
+        font-size: 2vh;
+    }
+
+    .organizer-image-cropper {
         width: 15vh;
         height: 15vh;
         position: relative;
         overflow: hidden;
         border-radius: 50%;
         text-align: center;
-    }
-    .member-photo {
-        display: inline;
         margin: 0 auto;
-        height: 100%;
-        width: auto;
-    }
-    .organizer-image-cropper {
-        width: 30vh;
-        height: 30vh;
-        position: relative;
-        overflow: hidden;
-        border-radius: 50%;
-        text-align: center;
     }
     .list{
         list-style-type: none;
     }
 
     .flex-container {
-        padding: 10vh;
-        padding-top: 0;
+        padding: 50px 0;
         margin: 0;
         list-style: none;
         display: -webkit-box;
@@ -39,31 +57,27 @@ const membersStyle = `<style>
         display: flex;
         -webkit-flex-flow: row wrap;
         justify-content: space-around;
-        font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
         color: #393939;
         font-size: 2.5vh;
     }
 
-    .flex-container-title{
+    .whoami {
         padding-bottom: 0vh;
+        font-family: Roboto, "Lucida Console";
+        font-size: 4rem;
+        font-weight: 300;
+        line-height: 1.2;
     }
 
     .member-flex-item {
-        padding: 2vh;
-        width: 15vh;
-        height: 15vh;
-        margin-top: 5vh;
+        padding: 1vh;
+        width: 10vh;
+        height: 10vh;
         line-height: 3vh;
         text-align: center;
     }
 
-    .organizer-flex-item {
-        padding: 5vh;
-        height: 15vh;
-        margin-top: 10vh;
-        line-height: 3vh;
-        text-align: center;
-    }
+
 </style>`;
 
 const crateMemberContainer = element =>
@@ -73,7 +87,11 @@ const crateMemberContainer = element =>
     element.name
   }" class="member-photo">
             </div>
-         <div class="member-name">${element.name}</div>
+        ${
+          element.role === "organizer"
+            ? `<div class="member-name">${element.name}</div>`
+            : ``
+        } 
     </li>`;
 
 const addMembers = membersList => {
@@ -103,7 +121,10 @@ const whoami = `
 `;
 
 export const Members = `
-    ${membersStyle}
-    ${whoami}
-    ${addMembers(membersList)}
-`;
+<div class="members-container">
+    <div class="members-wrapper">
+        ${membersStyle}
+        ${whoami}
+        ${addMembers(membersList)}
+    </div>
+</div>`;

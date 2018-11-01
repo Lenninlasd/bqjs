@@ -10,6 +10,8 @@ export const Header = `
             width: 100%;
             display: flex;
             justify-content: space-between;
+            max-width: 1152px;
+            margin: 0 auto;
         }
         .navbarBaqJS .title {
             font-size: 1.5rem;
