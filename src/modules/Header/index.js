@@ -1,4 +1,4 @@
-export const header = `
+export const Header = `
     <style>
         .baq-container {
             padding-left: 20px;
@@ -10,6 +10,8 @@ export const header = `
             width: 100%;
             display: flex;
             justify-content: space-between;
+            max-width: 1152px;
+            margin: 0 auto;
         }
         .navbarBaqJS .title {
             font-size: 1.5rem;
@@ -38,7 +40,7 @@ export const header = `
         <header class="navbarBaqJS">
 
             <div class="navbar-left-text">
-                <img src="./img/BAQJS-02.png" alt="BarranquillaJS logo">
+                <img src="./src/img/BAQJS-02.png" alt="BarranquillaJS logo">
                 <h1 class="title">
                     BarranquillaJS
                 </h1>
