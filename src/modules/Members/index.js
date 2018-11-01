@@ -80,19 +80,14 @@ const membersStyle = `<style>
 
 </style>`;
 
-const crateMemberContainer = element =>
-  `<li class="${element.role}-flex-item">
-    <div class="${element.role}-image-cropper">
-    <img src=${element.photo} alt="Photo of ${
-    element.name
-  }" class="member-photo">
-            </div>
-        ${
-          element.role === "organizer"
-            ? `<div class="member-name">${element.name}</div>`
-            : ``
-        } 
-    </li>`;
+const crateMemberContainer = element => `
+    <li class="${element.role}-flex-item">
+        <div class="${element.role}-image-cropper">
+            <img src=${element.photo} alt="Photo of ${element.name}" class="member-photo">
+        </div>
+        ${element.role === "organizer"? `<div class="member-name">${element.name}</div>`: ``} 
+    </li>
+    `;
 
 const addMembers = membersList => {
   const organizers = [];
@@ -106,12 +101,14 @@ const addMembers = membersList => {
     }
   });
 
-  return `<ul class="flex-container list" id="js-organizer-list">
-            ${organizers.join("")}
-        </ul>
-        <ul class="flex-container list" id="js-member-list">
-            ${regularMember.join("")}
-        </ul>`;
+  return `
+    <ul class="flex-container list" id="js-organizer-list">
+        ${organizers.join("")}
+    </ul>
+    <ul class="flex-container list" id="js-member-list">
+        ${regularMember.join("")}
+    </ul>
+    `;
 };
 
 const whoami = `
@@ -127,4 +124,5 @@ export const Members = `
         ${whoami}
         ${addMembers(membersList)}
     </div>
-</div>`;
+</div>
+`;
