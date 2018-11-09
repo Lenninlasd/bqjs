@@ -1,0 +1,35 @@
+.baq-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #f2d901;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.15);
+}
+.navbar-baq {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.navbar-baq .title {
+  font-size: 1.5rem;
+  color: black;
+}
+.icon-redes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.icon-redes a {
+  color: #222;
+  padding: 7px 8px;
+  margin-left: 12px;
+  font-size: 24px;
+}
+.navbar-baq .navbar-left-text {
+  display: flex;
+  align-items: center;
+}
+.navbar-baq .navbar-left-text img {
+  max-height: 4rem;
+}
