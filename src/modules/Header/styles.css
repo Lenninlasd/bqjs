@@ -2,7 +2,11 @@ header {
   display: grid;
 }
 
-header nav {
+header .bottom {
+  display: none;
+}
+
+header .top {
   display: grid;
   grid-template-columns: minmax(auto, .9fr) repeat(4, auto);
   grid-gap: 10px;
@@ -12,12 +16,12 @@ header nav {
   box-shadow: 0 1px 10px 1px rgba(0, 0, 0, .3);
 }
 
-header nav img {
+header .top img {
   width: 40px;
   height: 40px;
 }
 
-header nav div:first-of-type {
+header .top div:first-of-type {
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
@@ -27,7 +31,7 @@ header nav div:first-of-type {
 
 header nav div i {
   font-size: 22px;
-  color: rgba(0, 0, 0, .6);
+  color: rgba(0, 0, 0, .7);
   transition: 0.3s ease;
 }
 
@@ -35,8 +39,32 @@ header nav div i:hover {
   color: rgb(0, 0, 0);
 }
 
-/* @media (max-width: 370px) {
-  header nav {
-    gritemc
+@media (max-width: 370px) {
+  header .top {
+    grid-template-columns: 1fr;
   }
-} */
+
+  header .top div {
+    display: none;
+  }
+
+  header .top div:first-of-type {
+    justify-content: center;
+  }
+
+  header .bottom {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2D903;
+    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, .3);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1;
+  }
+}
