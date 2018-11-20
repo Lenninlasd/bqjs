@@ -1,5 +1,9 @@
 header {
   display: grid;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 header .bottom {
@@ -43,7 +47,7 @@ header nav div i:hover {
   color: rgb(0, 0, 0);
 }
 
-@media (max-width: 370px) {
+@media (max-width: 800px) {
   header .top {
     grid-template-columns: 1fr;
   }
@@ -71,4 +75,7 @@ header nav div i:hover {
     padding: 10px 0;
     z-index: 1;
   }
+
 }
+
+
