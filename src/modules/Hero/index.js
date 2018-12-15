@@ -14,6 +14,6 @@ export const Hero = `
         </div>
     </div>
     <div class="${styles.map}">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Atlantico-municipios.svg">
+        <img src="../../img/b2.svg">
     </div>
 </div>`;
