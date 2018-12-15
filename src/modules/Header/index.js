@@ -1,11 +1,11 @@
 import styles from './styles.css';
 
-export const Header = 
+export const Header =
 `
     <header>
         <nav class="${styles.top}">
             <div>
-                <img src="./src/img/BAQJS-02.png" alt="BarranquillaJS logo">
+                <img src="../../img/BAQJS-02.png" alt="BarranquillaJS logo">
                 <h1>
                     BarranquillaJS
                 </h1>
