@@ -1,56 +1,25 @@
+.hero-container {
+  display: grid;
+  grid-template-columns: minmax(auto, 1125px);
+  justify-content: center;
+}
+
 .hero {
   color: #233034;
   font-size: 32px;
   line-height: 1.36;
-  text-align: left;
-  display: flex;
-  max-width: 1152px;
-  margin: 20px auto;
-  justify-content: space-between;
-  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }
 .text-container {
   padding: 16px;
-  display: flex;
-  align-items: center;
-  max-width: 600px;
 }
 .text {
-  flex-direction: column;
-  justify-content: flex-start;
   font-weight: 300;
 }
-.map {
-  position: absolute;
-  z-index: -1;
-  overflow: hidden;
-  /* top: 10px; */
-  left: 40%;
-  overflow-y: hidden;
-  /* height: 600px; */
-}
-.map img {
-  max-width: 90%;
-  filter: drop-shadow(0 2px 2px gray);
-}
-
-@media (max-width: 800px) {
-    .map {
-        left: 0;
-    }
-    .map img {
-      filter: opacity(10%) blur(1px);
-    }
-}
-@media (min-width: 1400px) {
-    .map {
-        left: 50%;
-    }
-    .map img {
-        max-width: 70%;
-    }
-}
-
 .baq-button {
   background: #ffd121;
   height: 53px;
@@ -74,4 +43,21 @@
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
   transition: all 0.2s ease-in;
+}
+
+.map {
+  text-align: center;
+}
+
+.map img {
+  max-width: 80%
+}
+
+@media (max-width: 1064px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .map img {
+    width: 90%
+  }
 }

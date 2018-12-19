@@ -58,11 +58,11 @@
 }
 
 .whoami {
-  padding-bottom: 0vh;
   font-family: Roboto, "Lucida Console";
   font-size: 4rem;
   font-weight: 300;
   line-height: 1.2;
+  text-align: center;
 }
 
 .member-flex-item {
