@@ -1,0 +1,10 @@
+# Production
+dist/
+dist/*
+
+# Dependencies
+node_modules/
+
+# Logs
+yarn-debug.log*
+yarn-error.log*
